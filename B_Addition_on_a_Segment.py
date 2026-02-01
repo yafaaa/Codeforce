@@ -14,4 +14,4 @@ for _ in range(t):
     else:
         print(non_zero)
         
-    
+    #presum, greedy

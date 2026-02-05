@@ -5,13 +5,12 @@ for _ in range(t):
     non_zero = 0
     summ = 0
     for a in l:
-        summ+=a
-        if a!=0:
-            non_zero+=1
+        summ += a
+        if a != 0:
+            non_zero += 1
 
-    if summ == n:
-        print(1)
-    else:
-        print(non_zero)
-        
-    # presum, greedy 
+    while (summ - non_zero)<n-1:
+        non_zero-=1
+    
+    print(non_zero)
+    

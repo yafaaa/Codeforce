@@ -11,9 +11,9 @@ def main():
         else:
             l.append(b[pb])
             pb += 1
-    while pa < x:
-        l.append(a[pa])
-        pa += 1
+    if pa < x:
+        l.append(a[pa:])
+        
     while pb < y:
         l.append(b[pb])
         pb += 1

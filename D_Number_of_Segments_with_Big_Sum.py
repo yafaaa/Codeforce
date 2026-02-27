@@ -1,14 +1,46 @@
-n, t = map(int, input().split())
-l = list(map(int, input().split()))
-a,s,c,b = 0, 0, 0, 0
-while b<n:
-    s+=l[b]
-    while a<n and s>=t:
-        s-=l[a]
-        a+=1
-    c+=(b-a+1)
-    b+=1
-c=(n*(n+1)//2)-c
-print(c)
+n, s = map(int, input().split())
+nums = list(map(int, input().split()))
+a = 0
+curr_s = 0
+ans = 0
+for b in range(n):
+    curr_s += nums[b]
+    if curr_s < s:
+        continue
+    while curr_s-nums[a] >= s:
+        curr_s -= nums[a]
+        a += 1
+    ans += a+1
     
+print(ans)
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     

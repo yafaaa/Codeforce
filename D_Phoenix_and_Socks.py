@@ -20,17 +20,19 @@ for _ in range(int(input())):
                 del right_dict[k]
             r -= mn_val
     move = 0
-    # print(l, r)
+    
     if l < r:
         dis, total_val = 0, 0
+
         for k, v in right_dict.items():
             dis = v%2
             total_val += v-dis
-        # print(dis, total_val)
+        
         for i in range((r-l)//2):
             if total_val:
                 total_val -= 2
                 move += 1
+
             else:
                 dis -= 1
                 move += 2
@@ -39,13 +41,16 @@ for _ in range(int(input())):
         
     elif r < l:
             dis, total_val = 0, 0
+
             for k, v in left_dict.items():
                 dis = v%2
                 total_val += v-dis
+
             for i in range((l-r)//2):
                 if total_val:
                     total_val -= 2
                     move += 1
+
                 else:
                     dis -= 1
                     move += 2

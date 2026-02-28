@@ -1,16 +1,59 @@
-n, t = map(int, input().split())
-l = list(map(int, input().split()))
-a,c  = 0, 0
-d = dict()
+from collections import defaultdict
+n, k = map(int, input().split())
+nums = list(map(int, input().split()))
+a = 0
+d = defaultdict(int)
+mx = 0
+ans = 0
 for b in range(n):
-    d[l[b]] =d.get(l[b],0) + 1
-    while len(d)>t:
-        d[l[a]]-=1
-        if d[l[a]]==0:
-            del d[l[a]]
-        a+=1
-    c+=(b-a+1)
-print(c)
+    d[nums[b]] += 1
+    while len(d.keys()) > k:
+        d[nums[a]] -= 1
+        if not d[nums[a]]:
+            del d[nums[a]]
+        a += 1
+    ans += (b-a+1)
+print(ans)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# n, t = map(int, input().split())
+# l = list(map(int, input().split()))
+# a,c  = 0, 0
+# d = dict()
+# for b in range(n):
+#     d[l[b]] =d.get(l[b],0) + 1
+#     while len(d)>t:
+#         d[l[a]]-=1
+#         if d[l[a]]==0:
+#             del d[l[a]]
+#         a+=1
+#     c+=(b-a+1)
+# print(c)
 
     
 

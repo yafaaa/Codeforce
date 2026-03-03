@@ -18,3 +18,5 @@ for _ in range(int(input())):
             curr_s = 0
         
     print(cnt)
+
+    

@@ -1,15 +1,17 @@
 for _ in range(int(input())):
     n = int(input())
-    s = input()
-    ans = ""
-    for char in s:
-        if int(char) % 2 != 0:
-            ans += char
-        
-        if len(ans) == 2:
-            break
-            
-    if len(ans) == 2:
-        print(ans)
-    else:
+    string = input()
+    ans = []
+    prefix = 0
+    f = False
+    for i in range(n):
+        if int(string[i]) % 2:
+            ans.append(string[i])
+            prefix += int(string[i])
+
+            if not prefix % 2:
+                print("".join(ans))
+                f = True
+                break
+    if not f:
         print(-1)

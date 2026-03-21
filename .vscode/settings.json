@@ -1,0 +1,8 @@
+{
+    "github.copilot.nextEditSuggestions.enabled": false,
+    "C_Cpp.copilotHover": "disabled",
+    "github.copilot.chat.backgroundAgent.enabled": false,
+    "github.copilot.chat.anthropic.useMessagesApi": false,
+    "github.copilot.chat.agent.currentEditorContext.enabled": false,
+    "editor.inlineSuggest.enabled": false
+}
